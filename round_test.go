@@ -88,6 +88,7 @@ func roundTest(intDigitNum, decDigitNum int, posFrom, posTo int,
 ) {
 	intMax := int(math.Pow10(intDigitNum))
 	decMax := int(math.Pow10(decDigitNum))
+	format := fmt.Sprintf("%%d.%%0%dd", decDigitNum)
 
 	limit := make(chan struct{}, 6)
 	var wg sync.WaitGroup
@@ -102,7 +103,6 @@ func roundTest(intDigitNum, decDigitNum int, posFrom, posTo int,
 			}()
 			// Decimal part
 			for d := 0; d < decMax; d++ {
-				format := fmt.Sprintf("%%d.%%0%dd", decDigitNum)
 				numStr := fmt.Sprintf(format, i, d)
 
 				for p := posFrom; p < posTo; p++ {
