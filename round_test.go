@@ -105,7 +105,7 @@ func roundTest(intDigitNum, decDigitNum int, posFrom, posTo int,
 			for d := 0; d < decMax; d++ {
 				numStr := fmt.Sprintf(format, i, d)
 
-				for p := posFrom; p < posTo; p++ {
+				for p := posFrom; p <= posTo; p++ {
 					wi, wd := calcWantRoundedNum(i, d, decDigitNum-p, decMax)
 					wantNumStr := fmt.Sprintf(format, wi, wd)
 
