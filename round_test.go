@@ -51,7 +51,7 @@ func TestRoundByPositionNG1(t *testing.T) {
 			roundTest(intDigitNum, decDigitNum, tt.from, tt.to,
 				roundtest.RoundByPositionNG1,
 				func(got, want, base float64) {
-					t.Errorf("round.RoundByPositionNG1() = %v, want %v, base %v", got, want, base)
+					t.Logf("round.RoundByPositionNG1() = %v, want %v, base %v", got, want, base)
 				},
 			)
 		})
@@ -75,7 +75,7 @@ func TestRoundByPositionNG2(t *testing.T) {
 			roundTest(intDigitNum, decDigitNum, tt.from, tt.to,
 				roundtest.RoundByPositionNG2,
 				func(got, want, base float64) {
-					t.Errorf("round.RoundByPositionNG2() = %v, want %v, base %v", got, want, base)
+					t.Logf("round.RoundByPositionNG2() = %v, want %v, base %v", got, want, base)
 				},
 			)
 		})
